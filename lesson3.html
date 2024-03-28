@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = 'stylesheet' href = 'styles_links.css'>
+	<title> C++ </title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/cpp_ico.ico">
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "container">
+			<div class = "headerline">
+				<div class = "headerlogo" >
+					<a href = "index.html"><img src = "img/cpp_logo.png" alt = "cpp logo"  
+						height = "100" width = "100"></a>
+				</div>
+
+				<div class = "nav">
+					<a class = "nav-item" href = "index.html"> Главная </a>
+					<a class = "nav-item" href = "lessons.html"> Уроки </a>
+					<a class = "nav-item" href = "algo.html"> Алгоритмы </a>
+					<a class = "nav-item" href = "format.html"> Форматирование кода </a>
+					<a class = "nav-item" href = "about.html"> О языке </a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+ <div class="content three_quarter"> 
+      
+      <h1>Математичческие операции</h1>
+      <h2>Функции библиотеки math.lib</h2>
+      <p>Функции для расчета математических выражений находятся в библиотеке math.lib (подключение библиотеки: #include ). Все аргументы в тригонометрических функциях задаются в радианах. Параметры и аргументы всех остальных функций имеют тип double (кроме abs(x)).</p>
+      <div class="scrollable">
+        <table>
+          <thead>
+            <tr>
+              <th>Математическая функция</th>
+              <th>Функция библиотеки math.lib</th>
+              <th>Описание</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>|x|</td>
+              <td><strong>abs(x)</strong></td>
+              <td>Вычисление абсолютного значения(<strong>только для целых чисел!</strong>)</td>
+            </tr>
+            <tr>
+              <td>|x|</td>
+              <td><strong>fabs(x)</strong></td>
+              <td>Вычисление абсолютного значения</td>
+            </tr>
+            <tr>
+              <td>√x</td>
+              <td><strong>sqrt(x)</strong></td>
+              <td>Вычисление квадратного корня х</td>
+            </tr>
+            <tr>
+              <td>x<sup>y</sup></td>
+              <td><strong>pow(x, y)</strong></td>
+              <td>Возведение в х в степень у </td>
+            </tr>
+            <tr>
+              <td>sin(x)</td>
+              <td><strong>sin(x)</strong></td>
+              <td>Вычисление синуса х</td>
+            </tr>
+            <tr>
+              <td>cos(x)</td>
+              <td><strong>cos(x)</strong></td>
+              <td>Вычисление косинуса х</td>
+            </tr>
+            <tr>
+              <td>tg(x)</td>
+              <td><strong>tan(x)</strong></td>
+              <td>Вычисление тангенса х</td>
+            </tr>
+            <tr>
+              <td>arccos(x)</td>
+              <td><strong>acos(x)</strong></td>
+              <td>Вычисление аркосинуса х</td>
+            </tr>
+            <tr>
+              <td>arctg(x)</td>
+              <td><strong>atan(x)</strong></td>
+              <td>Вычисление арктангенса х</td>
+            </tr>
+            <tr>
+              <td>e<sup>x</sup></td>
+              <td><strong>exp(x)</strong></td>
+              <td>Вычисление экспоненты числа х</td>
+            </tr>
+            <tr>
+              <td>ln(x)</td>
+              <td><strong>log(x)</strong></td>
+              <td>Вычисление натурального логарифма х</td>
+            </tr>
+            <tr>
+              <td>lg<sub>10</sub>(x)</td>
+              <td><strong>log10(x)</strong></td>
+              <td>Вычисление десятичного логарифма х</td>
+            </tr>
+            <tr>
+              <td>Округление к большему</td>
+              <td><strong>ceil(x)</strong></td>
+              <td>Функция возвращает действительное значение, соответсвующее наименьшему целому числу, которое больше или равно х</td>
+            </tr>
+            <tr>
+              <td>Округление к меньшему</td>
+              <td><strong>floor(x)</strong></td>
+              <td>Функция возвращает действительное значение, соответсвующее наибольшему целому числу, которое меньше или равно х</td>
+            </tr>
+            <tr>
+              <td>Остаток от деления х на у</td>
+              <td><strong>fmod(x, y)</strong></td>
+              <td>Функция возвращает действительное значение, соответсвующее остатку от целочисленного деления х на у</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><br>Например:</p>
+      <pre><code>      <span>double z = exp(1)+exp(x*x)+exp(2*pow(x,3));</span> <span class="eee">//z = e + e<sup>x<sup>2</sup></sup>+e<sup>2x<sup>3</sup></sup></span>
+      <span>double z1 = fmod(5,2) </span> <span class="eee">// z1 = 5%2  => z1 = {5/2} = 1</span>
+      <span>double z2 = ceil(5.6) </span> <span class="eee">// z2 = 6 </span>
+      <span>double z3 = floor(-5.6) </span> <span class="eee">// z2 = -6 </span>
+    </code></pre>
+
+    <h2>Пример выполнения задания</h2>
+    <p>Написать программу вычисления линейного арифметического выражения:</p>
+    <img  src="./img/math1.png" alt="">
+    <P>Код программы для решения данной задачи будет выглядеть следующим образом:</P>
+    <img  src="./img/math2.png" alt="">
+    <h3><i>Важно знать</i></h3>
+    <img  src="./img/math3.png" alt="">
+      
+    </div>
+  
+  </main>
+</div>
+
+
+
+</body>
+
+</html>

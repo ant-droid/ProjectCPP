@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = 'stylesheet' href = 'styles_links.css'>
+	<title> C++ </title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/cpp_ico.ico">
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "container">
+			<div class = "headerline">
+				<div class = "headerlogo" >
+					<a href = "index.html"><img src = "img/cpp_logo.png" alt = "cpp logo"  
+						height = "100" width = "100"></a>
+				</div>
+
+				<div class = "nav">
+					<a class = "nav-item" href = "index.html"> Главная </a>
+					<a class = "nav-item" href = "lessons.html"> Уроки </a>
+					<a class = "nav-item" href = "algo.html"> Алгоритмы </a>
+					<a class = "nav-item" href = "format.html"> Форматирование кода </a>
+					<a class = "nav-item" href = "about.html"> О языке </a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+ <div class="content three_quarter"> 
+      
+      <h1>Типы данных и переменные</h1>
+      <h2>Типы данных</h2>
+      <p>В языке С++ <em>все переменные</em> имеют определенный тип данных. Например, переменная, имеющая целочисленный тип не может содержать ничего кроме целых чисел, а переменная с плавающей точкой — только дробные числа.</p>
+      <p><strong>Тип данных</strong> присваивается переменной при ее объявлении или инициализации. Ниже приведены основные типы данных языка C++, которые нам понадобятся.</p>
+      <h3>Основные типы данных в C++</h3>
+      <ul>
+      <li><strong>int</strong> — целочисленный тип данных.</li>
+      <li><strong>float</strong> — тип данных с плавающей запятой.</li>
+      <li><strong>double</strong> — тип данных с плавающей запятой двойной точности.</li>
+      <li><strong>char</strong> — символьный тип данных.</li>
+      <li><strong>bool</strong> — логический тип данных.</li>
+      </ul>
+      <h3>Объявление переменной</h3>
+      <p>Объявление переменной в C++ происходит таким образом: сначала указывается тип данных для этой переменной а затем название этой переменной.</p>
+      <h3>Пример объявления переменных</h3>
+      <pre><code>      <span>int a;</span> <span class="eee">// объявление переменной a целого типа. </span>
+      <span>float b; </span><span class="eee">// объявление переменной b типа данных с плавающей запятой. </span>
+      <span>double c = 14.2</span>; <span class="eee">// инициализация переменной типа double. </span>
+      <span>char d = 's'</span>; <span class="eee">// инициализация переменной типа char. </span>
+      <span>bool k = true</span>; <span class="eee">// инициализация логической переменной k.</span>
+      </code></pre>
+      <ul>
+      <li>
+      <p>Заметьте, что в C++ <strong>оператор присваивания</strong> <strong><code>(=)</code></strong> — не является знаком равенства и не может использоваться для сравнения значений. Оператор равенства записывается как «двойное равно» — <code>==</code>.</p>
+      </li>
+      <li>
+      <p>Присваивание используется для сохранения определенного значение в переменной. Например, запись вида <code>a = 10</code> задает переменной <code>a</code> значение числа 10.</p>
+      </li>
+      </ul>
+      <h3>Простой калькулятор на C++</h3>
+      <p>Сейчас мы напишем простую программу-калькулятор, которая будет принимать от пользователя два целых числа, а затем определять их сумму:</p>
+      <pre><code>#include &lt;iostream&gt;</span>
+      <span>using namespace std</span>;
+      
+      <span>int main ()</span> 
+      { 
+          <span>setlocale(0, ""); </span> 
+          <span class="eee">/*7*/</span> <span>int  a, b; <span class="eee">// объявление двух переменных a и b целого типа данных. </span>
+          <span>cout  &lt;&lt; "Введите первое число: "</span>; 
+          <span>cin  &gt;&gt; a; <span class="eee">// пользователь присваивает переменной a какое-либо значение. </span>
+          <span>cout &lt;&lt; "Введите второе число: "</span>; 
+          <span>cin &gt;&gt; b; </span>
+          <span class="eee">/*12*/</span>  <span>int  c = a + b; <span class="eee">// переменной c присваиваем значение суммы введенных данных.</span>
+          <span>cout  &lt;&lt; "Сумма чисел = "  &lt;&lt; c &lt;&lt; endl;</span> <span class="eee">// вывод ответа. </span>
+          <span>return 0</span>; 
+      } </code></pre>
+      <h3>Разбор кода</h3>
+      <p>В 7-й строке кода программы мы объявляем переменные <code>«a»</code> и <code>«b»</code> целого типа <code>int</code>. В следующей строке кода выводится сообщение пользователю, чтобы он ввел с клавиатуры первое число.</p>
+      <p>В 9-й строке стоит еще незнакомая вам конструкция — <code>cin &gt;&gt;</code>. С помощью нее у пользователя запрашивается ввод значения переменной <code>«a»</code> с клавиатуры. Аналогичным образом задается значение переменной <code>«b»</code>.</p>
+      <p>В 12-й строке мы производим инициализацию переменной <code>«c»</code> суммой переменных <code>«a»</code> и <code>«b»</code>. Далее находится уже знакомый вам оператор <code>cout</code>, который выводит на экран строку и значение переменной <code>«c»</code>.</p>
+      <ul>
+      <li>При выводе переменных, они <em>не заключаются в кавычки</em>, в отличие от строк.</li>
+      </ul>
+      
+    </div>
+    
+    
+    <div class="clear"></div>
+  </main>
+</div>
+
+
+
+</body>
+
+</html>

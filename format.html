@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8">
+		<link rel = 'stylesheet' href = 'styles_links.css'>
+		<title> C++ </title>
+		<link rel="shortcut icon" type="image/x-icon" href="img/cpp_ico.ico">
+	</head>
+
+	<body>
+		<div class = "header">
+			<div class = "container">
+				<div class = "headerline">
+					<div class = "headerlogo" >
+						<a href = "index.html"><img src = "img/cpp_logo.png" alt = "cpp logo"  
+							height = "100" width = "100"></a>
+					</div>
+
+					<div class = "nav">
+						<a class = "nav-item" href = "index.html"> Главная </a>
+						<a class = "nav-item" href = "lessons.html"> Уроки </a>
+						<a class = "nav-item" href = "algo.html"> Алгоритмы </a>
+						<a class = "nav-item" href = "format.html"> Форматирование кода </a>
+						<a class = "nav-item" href = "about.html"> О языке </a>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="text1">
+			<h1>Форматирование исходного кода</h1>
+			<p><img src="img/no-yes.jpg" alt="" class = "pic1">Правильное форматирование кода действительно важно, если хотите чтобы код был легко-читаемым и был понятен не только вам. К примеру, студенты одной группы, которые читают одинаковую литературу по программированию, которым программирование преподает один и тот же человек, всё равно решают задачи разными способами. При этом у каждого свой особый стиль форматирования кода.<p>
+			<p>Если вы когда-либо пытались читать чужой код, то замечали, что необходимо некоторое время, чтобы перестроиться и начать понимать, как работает этот код и что он реализует. Конечно, писать код можно по-разному, в том числе не совсем читабельно, и что самое интересное, программа будет замечательно работать. Вот посмотрите на этот код:</p>
+
+<div class = "code">
+	<code>
+		#include'iostream'<br>
+		using namespace std;<br>
+		int main(){	setlocale(LC_ALL, "rus");<br>
+		int boxWithFruit=15;//количество ящиков на складе<br>
+		int amountBoxForSale=0;// количество отгружаемых ящиков<br>
+		cout &laquo; "На складе сейчас" &laquo; boxWithFruit &laquo; &quot; ящиков<br> с фруктами.\n\n &quot; ;<br>
+		for(int i=1;;i++)//i - количество машин к погрузке<br>
+		{cout &laquo; &quot; Сколько ящиков отгрузить в &quot; &laquo; i &laquo &quot; -ю машину? &quot; ;<br>
+		cin &raquo; amountBoxForSale;<br>
+		if(amountBoxForSale>boxWithFruit)<br>
+		{cout &laquo; "\nНа складе нет такого количества товара!";<br>
+		cout &laquo; "Осталось только " &laquo; boxWithFruit &laquo; &quot; ящиков\n\n &quot; ;<br>
+		i--;//уменьшить счетчик на 1<br>
+		}else{boxWithFruit-=amountBoxForSale;//перезаписываем значение<br>
+		cout &laquo; &quot; Осталось  &quot; &laquo; boxWithFruit &laquo; &quot; <br>ящиков.\n &quot; ;<br>
+		}if(boxWithFruit==0)//если ящиков больше нет - выйти из цикла<br>
+		{cout &laquo; &quot; Фрукты закончились! До свидания!\n &quot;;<br>
+		break;}}return 0;}<br>
+	<code>
+</div>
+
+
+<p>Он полностью рабочий и никаких проблем при его выполнении не происходит. Но искренне жаль того программиста, которому «в наследство» достанется программа, написанная таким образом, и которому надо будет в эту программу что-то добавить или усовершенствовать её. Это еще хорошо, что в данной программе переменным даны осмысленные имена, а не int a, int b. Хотя программа очень простая, она очень плохо читается. Другое дело если она будет написана с использованием правил стандартов форматирования кода и соглашений о кодировании – с пробелами, отступами, переносами строк, комментариями: </p>
+
+					<div class = "code">
+					<code>
+					#include "iostream"<br>
+					using namespace std;<br>
+			<br>
+					int main()<br>
+					{<br>
+			&nbsp;&nbsp;&nbsp;	setlocale(LC_ALL, "rus");<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;			int boxWithFruit = 15; // количество ящиков на складе<br>
+			&nbsp;&nbsp;&nbsp;			int amountBoxForSale = 0; // количество отгружаемых ящиков<br>
+			<br>
+			&nbsp;&nbsp;&nbsp;			cout << "На складе сейчас" << boxWithFruit << " ящиков с фруктами.\n\n";<br>
+			&nbsp;&nbsp;&nbsp;			for (int i = 1;; i++) //  i - количество машин к погрузке<br>
+			&nbsp;&nbsp;&nbsp;			{<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				cout << "Сколько ящиков отгрузить в " << i << "-ю машину? ";<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				cin >> amountBoxForSale;<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				if (amountBoxForSale > boxWithFruit)<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				{<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					cout << "Осталось только " << boxWithFruit << " ящиков\n\n";<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					i--; // уменьшить счетчик на 1<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				}<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				else<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				{<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					boxWithFruit -= amountBoxForSale; // перезаписываем значение<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					cout << "Осталось " << boxWithFruit << " ящиков.\n";<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				}<br>
+
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				if (boxWithFruit == 0)// если ящиков больше нет - выйти из цикла<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				{<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					cout << "Фрукты закончились! До свидания!\n";<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					break;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;				}<br>
+			&nbsp;&nbsp;&nbsp;			}<br>
+						return 0;<br>
+					}<br> 
+
+					</code>
+			</div>
+
+
+<p>Вы видите насколько проще для чтения и понимания стал этот код.
+
+Практически всегда, над созданием одной программы работают несколько программистов. При этом сопровождать программу в дальнейшем может уже другая группа программистов. Становится очевидной необходимость создания единого стандарта кодирования. Если программисты будут придерживаться этих стандартов при написании кода – у всех он будет выглядеть одинаково, что в разы облегчит работу над коллективными проектами. Зачастую контора сама вырабатывает свой собственный стандарт кодирования (coding convention), но есть распространенные стандарты. К ним относятся, например:</p>
+
+<a href="https://google.github.io/styleguide/cppguide.html" class="block_link">Google C++ Style Guide</a>
+<a href="https://www.boost.org/development/requirements.html#Guidelines" class="block_link">Coding Standards IBM</a>
+<a href="https://www.amazon.com/exec/obidos/ASIN/0321113586/" class="block_link">Linux kernel coding style</a>
+
+
+<p>Если посмотреть статистику использования стандартов форматирования кода, становится очевидным, что большинству программистов есть еще над чем работать и к чему стремиться. Ведь больше половины из опрошенных, либо используют свой собственный стиль кодирования, либо вообще не знают, зачем стандарты форматирования и соглашения о кодировании созданы.</p>
+
+		</div>
+
+
+
+
+
+
+
+		
+
+
+	</body>
+
+</html>

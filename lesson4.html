@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = 'stylesheet' href = 'styles_links.css'>
+	<title> C++ </title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/cpp_ico.ico">
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "container">
+			<div class = "headerline">
+				<div class = "headerlogo" >
+					<a href = "index.html"><img src = "img/cpp_logo.png" alt = "cpp logo"  
+						height = "100" width = "100"></a>
+				</div>
+
+				<div class = "nav">
+					<a class = "nav-item" href = "index.html"> Главная </a>
+					<a class = "nav-item" href = "lessons.html"> Уроки </a>
+					<a class = "nav-item" href = "algo.html"> Алгоритмы </a>
+					<a class = "nav-item" href = "format.html"> Форматирование кода </a>
+					<a class = "nav-item" href = "about.html"> О языке </a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+    <div class="content three_quarter"> 
+      
+      <h1>Разветвляющиеся алгоритмы</h1>
+      <h3>Логические операции и операции сравнения</h3>
+      <p>Операции сравнения применяются при работе с двумя операндами и возвращают <strong>true (1)</strong>, если результат сравнения – истина, и <strong>false (0)</strong>, если результат сравнения – ложь. В языке С определены следующие операции сравнения: </p>
+<ul>
+  <li> &lt; (меньше), </li>
+  <li> &lt;= (меньше или равно), </li>
+  <li> &gt; (больше), </li>
+  <li> &gt; = (больше или равно), </li>
+  <li> != (не равно), </li>
+  <li> == (равно). </li>
+</ul>
+
+<p>Логические операции работают с операндами скалярных типов и возвращают результат булева типа. Существует три логические операции: </p>
+   <ul>
+     <li> <strong>!</strong> - отрицание или логическое <strong>НЕ</strong> </li>
+     <li><strong>&&</strong> - логическое <strong>И</strong> </li>
+     <li><strong>||</strong> - логическое <strong>ИЛИ</strong> </li>
+   </ul>   
+
+<h3>Оператор условной передачи управления <strong>if</strong></h3>
+<p>Форматы оператора if: </p>
+<ol>
+  <li><strong>Полная форма:</strong> 
+    <pre>      <span><strong>if</strong><i>(логическое_выражение) оператор_1;</i></span>
+      <span><strong>else</strong><i> оператор_2;</i></span></pre>
+    
+  </li>
+  <p class="red">Если логическое выражение истинно, то выполняется <i>оператор_1</i>, иначе – <i>оператор_2</i>.</p>
+  <li><strong> Сокращенная форма:</strong> 
+    
+      <pre>       <span><strong>if</strong> <i>(логическое_выражение) оператор_1;</i></span></pre>
+  </li>
+  <p class="red">Если <i>логическое_выражение</i> истинно, то выполняется <i>оператор_1</i>.</p>
+  <li><strong>Вложенная форма:</strong> 
+    <pre>      <span><strong>if</strong> <i>(логическое_выражение_1) оператор_1;</i></span>
+      <span><strong>else if</strong> <i>(логическое_выражение_2) оператор_2</i></span> 
+      <span><strong>else</strong> <i>оператор_3;</i></span></pre>
+  </li>
+  <p class="red">Если <i>логическое_выражение_1</i> истинно, то выполняется <i>оператор_1</i>, иначе, если <i>логическое_выражение_2</i> истинно, то выполняется <i>оператор_2</i>, иначе выполняется <i>оператор_3</i>. </p>
+</ol>
+
+<h3>Оператор множественного выбора <strong>switch</strong></h3>
+<p>Общая форма оператора:</p>
+
+<pre><span><strong>switch</strong> <i>(переменная_выбора)</i></span>
+{
+  <span><i><strong>case</strong> const_1: операторы_1; <strong>break</strong>; </i></span>
+  <span>...</span>
+  <span><i><strong>case</strong> const_N: операторы_N; <strong>break</strong>; </i></span>
+  <span><i><strong>default:</strong>операторы_N+1;</i> </span>
+}</pre>
+
+<p class="red"><strong>переменная_выбора, const_1,…, const_N</strong> – константа, переменная или выражение <i>целого, символьного</i> или <i>логического</i> типа.</p>
+
+<p>При использовании оператора <strong>switch</strong> сначала анализируется переменная_выбора и проверяется, совпадает ли её значение со значением одной из констант <strong>const_1, …, const_N</strong>. При совпадении выполняются операторы этого <strong>case</strong>. Конструкция <strong>default</strong> (может отсутствовать) выполняется, если результат выражения не совпал ни с одной из констант. </p>
+
+    <h2>Пример выполнения задания</h2>
+    <p>Написать программу вычисления выражения:</p>
+    <img  src="./img/vetv1.png" alt="">
+    <p>Предусмотреть вывод информации о выбранной ветви вычислений.</p>
+    <P>Код программы для решения данной задачи будет выглядеть следующим образом:</P>
+    <img  src="./img/vetv2.png" alt="">
+      
+      
+    </div>
+  </main>
+</div>
+
+
+
+
+</body>
+
+</html>

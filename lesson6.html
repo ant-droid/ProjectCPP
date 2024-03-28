@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = 'stylesheet' href = 'styles_links.css'>
+	<title> C++ </title>
+	<link rel="shortcut icon" type="image/x-icon" href="img/cpp_ico.ico">
+</head>
+
+<body>
+	<div class = "header">
+		<div class = "container">
+			<div class = "headerline">
+				<div class = "headerlogo" >
+					<a href = "index.html"><img src = "img/cpp_logo.png" alt = "cpp logo"  
+						height = "100" width = "100"></a>
+				</div>
+
+				<div class = "nav">
+					<a class = "nav-item" href = "index.html"> Главная </a>
+					<a class = "nav-item" href = "lessons.html"> Уроки </a>
+					<a class = "nav-item" href = "algo.html"> Алгоритмы </a>
+					<a class = "nav-item" href = "format.html"> Форматирование кода </a>
+					<a class = "nav-item" href = "about.html"> О языке </a>
+
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+
+    
+    <div class="content three_quarter"> 
+      
+      <h1>Структуры</h1>
+      <h3>Объявление структур</h3>
+      <p><strong>Структура</strong> - это составной тип данных, в котором под одним именем объединены данные <i>различных</i> типов. Отдельные данные структуры называются <i>полями</i>. Объявление структуры осуществляется с помощью ключевого слова <strong>struct</strong>, за которым указывается ее имя и список элементов, заключенных в фигурные скобки:</p>
+      <pre><span><strong>struct</strong> <i>имя</i></span>
+        {
+          <span><i> тип_элемента_1  имя_элемента_1; </i></span>
+          <span><i> тип_элемента_2  имя_элемента_2; </i></span>
+          <span>...</span>
+          <span><i> тип_элемента_n  имя_элемента_n; </i></span>
+        }</pre>
+      <p>Правила работы с полями структуры идентичны работе с переменными соответствующих типов. К полям структуры можно обращаться через <i> составное имя.</i> <strong>Формат обращения:</strong></p>
+      <p class="center"><i>имя_структуры.имя_поля</i></p> 
+      <p>или </p>
+      <p class="center"><i>указатель_на_структуру->имя_поля</i></p> 
+
+      <h2>Пример выполнения работы</h2>
+      <p><strong>Задание</strong>. Создать массив структур, содержащий информацию о студентах: ФИО, номер группы, оценки за последнюю сессию. Вывести информацию о студентах группы 610205 в порядке убывания среднего балла.</p>
+      <p>Код программы для решения данной задачи будет выглядеть следующим образом:</p>
+      <img  src="./img/structs.jpg" alt="">
+
+      
+     </div>
+  </main>
+</div>
+
+
+
+
+</body>
+
+</html>
